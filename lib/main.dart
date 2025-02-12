@@ -4,10 +4,21 @@ import 'package:app/welcomescreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: ToDoScreen(),
-    // routes: {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
 
-    // },
-  ));
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+    initialRoute: 'welcome',
+    routes: {
+      "welcome":(context)=>WelcomeScreen(),
+      "quote":(context)=>QuoteScreen(),
+      "todo":(context)=>ToDoScreen(),
+      
+    },
+  );
+  }
 }

@@ -26,8 +26,13 @@ class _QuoteScreenState extends State<QuoteScreen> {
   int flag = 0;
   @override
   Widget build(BuildContext context) {
+  var passedID = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
+  print(passedID);
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed: (){
+            Navigator.of(context).pop();
+          }, icon: Icon(Icons.arrow_back_ios)),
           title: Text("Today Quate 😁"),
         ),
         body: Column(

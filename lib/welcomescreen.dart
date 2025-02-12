@@ -26,7 +26,13 @@ class WelcomeScreen extends StatelessWidget {
                 Icon(Icons.heart_broken,color: Colors.red,size: 40,),
                 Text("Join US ")
               ],
-            )
+            ),
+            TextButton(onPressed: (){
+              Navigator.of(context).pushNamed("quote");
+            }, child: Text("Quote")),
+            TextButton(onPressed: (){
+               Navigator.of(context).pushNamed("todo");
+            }, child: Text("TODO")),
           ],
         ),
       ),
