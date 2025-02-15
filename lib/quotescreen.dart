@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:app/MOdels/task.dart';
 import 'package:flutter/material.dart';
 
 //Defination UI
@@ -26,14 +27,15 @@ class _QuoteScreenState extends State<QuoteScreen> {
   int flag = 0;
   @override
   Widget build(BuildContext context) {
-  var passedID = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
-  print(passedID);
+  Task passed = ModalRoute.of(context)!.settings.arguments as Task;
+  // print(passedID.id);
+  // print(passedID.text);
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(onPressed: (){
             Navigator.of(context).pop();
           }, icon: Icon(Icons.arrow_back_ios)),
-          title: Text("Today Quate 😁"),
+          title: Text("${passed.text}"),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

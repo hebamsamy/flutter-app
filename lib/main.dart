@@ -1,3 +1,5 @@
+import 'package:app/addstudentscreen.dart';
+import 'package:app/liststudentscreen.dart';
 import 'package:app/quotescreen.dart';
 import 'package:app/todoScreen.dart';
 import 'package:app/welcomescreen.dart';
@@ -15,9 +17,10 @@ class MyApp extends StatelessWidget {
     initialRoute: 'welcome',
     routes: {
       "welcome":(context)=>WelcomeScreen(),
-      "quote":(context)=>QuoteScreen(),
-      "todo":(context)=>ToDoScreen(),
-      
+      // "quote":(context)=>QuoteScreen(),
+      // "todo":(context)=>ToDoScreen(),
+      "student-list":(context)=>ListStudentScreen(),
+      "add-student":(context)=>AddStudentScreen(),
     },
   );
   }

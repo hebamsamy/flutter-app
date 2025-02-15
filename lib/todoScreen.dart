@@ -39,7 +39,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
         children: toDoList
             .map((t) => ListTile(
               onTap: () {
-                Navigator.of(context).pushNamed("quote",arguments:{"id" : t.id, "msg" : "hi"});
+                Navigator.of(context).pushNamed("quote",arguments:t);
               },
                   title: Text(
                     t.text,

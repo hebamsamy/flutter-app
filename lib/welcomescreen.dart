@@ -28,11 +28,11 @@ class WelcomeScreen extends StatelessWidget {
               ],
             ),
             TextButton(onPressed: (){
-              Navigator.of(context).pushNamed("quote");
-            }, child: Text("Quote")),
+              Navigator.of(context).pushNamed("add-student");
+            }, child: Text("Add Student")),
             TextButton(onPressed: (){
-               Navigator.of(context).pushNamed("todo");
-            }, child: Text("TODO")),
+               Navigator.of(context).pushNamed("student-list");
+            }, child: Text("See Students List")),
           ],
         ),
       ),
